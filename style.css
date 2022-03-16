@@ -1,42 +1,103 @@
 body {
-    background:#f3f3f3;
+  background: #f3f3f3;
 }
-.nav-button{
-    color: #333;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: bold;
-    margin: 0;
-    padding: 5px 10px;
-    text-decoration: none;
-    text-shadow: 0 1px 0 #fff;
-}
-
-.nav-button active {
-    background: rgb(119, 39, 39);
-    border-color: rgb(121, 25, 25);
-    color: #333;
+.nav-button {
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
 }
 
+.container {
+  margin-bottom: 30px;
+}
+.nav-button .active {
+  color: #fff;
+  background: #de5127;
+}
+
+.line {
+  margin-left: 30px;
+  margin-right: 30px;
+}
 .main-text {
-    color: #333;
-    font-size: 40px;
-    text-align: center;
-    font-weight: bold;
-    margin: 0;
-    padding: 5px 10px;
-    text-decoration: none;
-    text-shadow: 0 1px 0 #fff;
+  color: #333;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
 }
 
 .sub-text {
-    color: rgb(112, 110, 110);
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-    margin: 0;
-    padding: 5px 10px;
-    text-decoration: none;
-    text-shadow: 0 1px 0 #fff;
+  color: rgb(112, 110, 110);
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.my-card {
+  background-color: white;
+  max-width: 300px;
+}
+
+.card-head {
+  text-align: left;
+  padding-left: 32px;
+}
+
+.lower-line {
+  margin-left: 12px;
+  margin-right: 240px;
+}
+
+.lower-head {
+  margin-left: 24px;
+}
+
+.lower-text {
+  text-align: left;
+  max-width: 400px;
+  max-height: 500px;
+}
+
+.service {
+  color: #de5127;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.service-link {
+  margin-bottom: 15px;
+}
+.bold {
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #444140;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.my-lower-card {
+  height: 600px;
 }
