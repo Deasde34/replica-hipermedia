@@ -10,14 +10,14 @@ body {
   margin-top: 20px;
   padding: 5px 20px;
   text-decoration: none;
-  text-shadow: 0 1px 0 #fff;
 }
 
 .container {
   margin-bottom: 30px;
 }
-.nav-button .active {
-  color: #fff;
+.active,
+nav-button:hover {
+  color: rgb(0, 0, 0);
   background: #de5127;
 }
 
@@ -83,6 +83,7 @@ body {
 }
 .bold {
   font-weight: bold;
+  color: #de5127;
 }
 
 .btn {
