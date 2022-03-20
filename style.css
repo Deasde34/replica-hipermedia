@@ -1,8 +1,31 @@
+* {
+  box-sizing: border-box;
+}
 body {
   background: #f3f3f3;
+  display: block;
 }
+
+.main-nav {
+  display: -webkit-flex;
+  display: flex;
+}
+.main-nav li:first-child {
+  margin-right: auto;
+}
+.main-nav a {
+  margin: 10px;
+  border-radius: 5px;
+  background: #f3f3f3;
+  color: rgb(148, 148, 148);
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+}
+
 .nav-button {
   color: #333;
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
@@ -15,8 +38,12 @@ body {
 .container {
   margin-bottom: 30px;
 }
-.active,
-nav-button:hover {
+
+.nav-button:hover {
+  color: rgb(255, 255, 255);
+  background: #de5127;
+}
+.nav-button:active {
   color: rgb(0, 0, 0);
   background: #de5127;
 }
@@ -25,9 +52,16 @@ nav-button:hover {
   margin-left: 30px;
   margin-right: 30px;
 }
+.title-with-border {
+  padding-bottom: 10px;
+  margin: 10px 30px 20px 30px;
+  border-top: 1.4px solid rgba(58, 58, 58, 0.329);
+  border-bottom: 1.4px solid rgba(58, 58, 58, 0.329);
+}
 .main-text {
   color: #333;
   font-size: 40px;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   font-weight: bold;
   margin: 0;
@@ -39,6 +73,7 @@ nav-button:hover {
 .sub-text {
   color: rgb(112, 110, 110);
   font-size: 35px;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   font-weight: bold;
   margin: 0;
@@ -47,31 +82,127 @@ nav-button:hover {
   text-shadow: 0 1px 0 #fff;
 }
 
-.my-card {
+.my-cards {
+  margin-left: 2rem;
+  margin-right: 2rem;
   background-color: white;
   max-width: 300px;
+  height: 500px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
-
-.card-head {
+.my-cards:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.my-card-titles {
+  font-family: sans-serif;
+  font-size: 20px;
   text-align: left;
-  padding-left: 32px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 20px;
+  text-decoration: none;
 }
 
-.lower-line {
-  margin-left: 12px;
-  margin-right: 240px;
-}
-
-.lower-head {
-  margin-left: 24px;
-}
-
-.lower-text {
+.my-card-text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(78, 77, 77);
+  font-size: 14px;
   text-align: left;
-  max-width: 400px;
-  max-height: 500px;
+  border-top: 2px solid rgba(58, 58, 58, 0.329);
+  font-weight: italic;
+  margin: 10px 15px 0 15px;
+  padding: 5px 5px;
+}
+.wrapped-cards {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, 500px);
+}
+.my-card1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.my-card2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.my-card3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+.my-card4 {
+  grid-column: 4;
+  grid-row: 1;
+}
+#images {
+  border-radius: 5px 5px 0px 0px;
+}
+@media screen and (max-width: 1300px) {
+  .wrapped-cards {
+    grid-template-columns: repeat(2, 1);
+  }
+  .my-card1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .my-card2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .my-card3 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .my-card4 {
+    grid-column: 2;
+    grid-row: 2;
+  }
 }
 
+.wrapped-grid {
+  margin: 2rem 3rem 5rem 6.3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 25vw);
+  gap: 40px;
+  grid-auto-rows: minmax(100px, 400px);
+}
+.grid1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.grid2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.grid3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.my-grid-text {
+  font-family: sans-serif;
+  font-size: 14px;
+  text-align: left;
+  margin: 0;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+
+.my-grid-titles {
+  font-family: sans-serif;
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 0px 30px 15px;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(58, 58, 58, 0.329);
+}
 .service {
   color: #de5127;
   margin-left: 10px;
@@ -81,24 +212,54 @@ nav-button:hover {
 .service-link {
   margin-bottom: 15px;
 }
-.bold {
-  font-weight: bold;
-  color: #de5127;
-}
 
-.btn {
+.my-button1 {
   background-color: #444140;
-  border: none;
+  border-radius: 5px;
   color: white;
-  padding: 15px 32px;
+  padding: 0px 20px;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 14px;
+  margin: 150px 0px 0px 5rem;
   cursor: pointer;
 }
 
-.my-lower-card {
-  height: 600px;
+.my-button2 {
+  background-color: #444140;
+  border-radius: 5px;
+  color: white;
+  padding: 0px 20px;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 90px 0px 0px 5rem;
+  cursor: pointer;
+}
+
+.my-button3 {
+  background-color: #444140;
+  border-radius: 5px;
+  color: white;
+  padding: 0px 20px;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 80px 0px 0px 5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+  .my-button1 {
+    margin: 150px 0px 0px 5rem;
+  }
+  .my-button2 {
+    margin: 90px 0px 0px 5rem;
+  }
+  .my-button3 {
+    margin: 80px 0px 0px 5rem;
+  }
 }
